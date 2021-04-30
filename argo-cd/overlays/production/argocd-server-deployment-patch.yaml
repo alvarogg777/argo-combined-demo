@@ -1,10 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argocd-repo-server
+  name: argocd-server
 spec:
   template:
     spec:
       containers:
-      - name: argocd-repo-server
+      - name: argocd-server
         image: alinbalutoiu/argocd:v2.0.0
+

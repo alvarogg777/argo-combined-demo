@@ -12,9 +12,8 @@ patches:
     kind: Deployment
     name: argocd-redis
 patchesStrategicMerge:
-- argocd-repo-server-deployment-patch.yaml
+- argocd-application-controller-statefulset-patch.yaml
 - argocd-dex-server-deployment-patch.yaml
 - argocd-repo-server-deployment-patch.yaml
-- server.yaml
-# - repo-server.yaml
+- argocd-server-deployment-patch.yaml
 namespace: argocd
