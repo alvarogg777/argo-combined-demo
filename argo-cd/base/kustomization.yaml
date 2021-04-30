@@ -5,4 +5,8 @@ resources:
 - github.com/argoproj/argo-cd/manifests/crds
 - github.com/argoproj/argo-cd/manifests/base
 - github.com/argoproj/argo-cd/manifests/cluster-rbac/
+# patchesStrategicMerge:
+# - argocd-dex-server-deployment-patch.yaml
+# - argocd-repo-server-deployment-patch.yaml
+# - argocd-application-controller-statefulset-patch.yaml
 namespace: argocd

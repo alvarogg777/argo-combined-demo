@@ -7,6 +7,7 @@ spec:
     spec:
       containers:
       - name: argocd-repo-server
-        env:
-        - name: ARGOCD_EXEC_TIMEOUT
-          value: "300s"
+        image: alinbalutoiu/argocd:v2.0.0
+        # env:
+        # - name: ARGOCD_EXEC_TIMEOUT
+        #  value: "300s"

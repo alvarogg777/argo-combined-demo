@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: argocd-application-controller
+spec:
+    spec:
+      containers:
+        image: alinbalutoiu/argocd:v2.0.0
