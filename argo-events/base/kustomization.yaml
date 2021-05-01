@@ -5,5 +5,9 @@ resources:
 - rbac.yaml
 - github.com/argoproj/argo-events/manifests/base
 - event-bus.yaml
+patches:
+  - eventbus-controller-deployment.yaml
+  - sensor-controller-deployment.yaml
+  - eventsource-controller-deployment.yaml
 namespace: argo-events
 
