@@ -14,13 +14,12 @@ spec:
     helm:
       parameters:
       - name: global
-        values:
-          hub: docker.io/querycapistio
-          tag:: 1.9.4
-          defaultNodeSelector: 
-            kubernetes.io/arch: arm64
-          arch:
-            arm64: 2
+        hub: docker.io/querycapistio
+        tag:: 1.9.4
+        defaultNodeSelector: 
+          kubernetes.io/arch: arm64
+        arch:
+          arm64: 2
   destination:
     namespace: istio-system
     server: https://kubernetes.default.svc
