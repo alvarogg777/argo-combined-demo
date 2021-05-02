@@ -18,9 +18,11 @@ spec:
       - name: global.tag
         value: 1.9.4
       - name: global.defaultNodeSelector
-        value: "kubernetes.io/arch: arm64"
+        value:
+          kubernetes.io/arch: arm64
       - name: global.arch
-        value: "arm64: 2"
+        value:
+          arm64: 2
   destination:
     namespace: istio-system
     server: https://kubernetes.default.svc
