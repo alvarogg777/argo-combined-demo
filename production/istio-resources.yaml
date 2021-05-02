@@ -9,20 +9,20 @@ spec:
   project: production
   source:
     path: manifests/charts/base
-    repoURL: https://github.com/istio/istio.git
-    targetRevision: HEAD
-    helm:
-      parameters:
-      - name: global.hub
-        value: docker.io/querycapistio
-      - name: global.tag
-        value: 1.9.4
-      - name: global.defaultNodeSelector
-        value:
-          kubernetes.io/arch: arm64
-      - name: global.arch
-        value:
-          arm64: 2
+    repoURL: https://github.com/alvarogg777/istio.git
+    targetRevision: 1.9.4-patch
+    # helm:
+    #   parameters:
+    #   - name: global.hub
+    #     value: docker.io/querycapistio
+    #   - name: global.tag
+    #     value: 1.9.4
+    #   - name: global.defaultNodeSelector
+    #     value:
+    #       kubernetes.io/arch: arm64
+    #   - name: global.arch
+    #     value:
+    #       arm64: 2
   destination:
     namespace: istio-system
     server: https://kubernetes.default.svc
