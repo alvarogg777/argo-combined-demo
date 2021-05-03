@@ -5,12 +5,12 @@ metadata:
 spec:
   template:
     spec:
-      serviceAccountName: argo-server
       containers:
-        - name: argo-server
-          args:
+        - args:
           - server
           - --secure=false
+          name: argo-server
+          image: docker.io/argoproj/argocli:latest-linux-arm64
           readinessProbe:
             httpGet:
               path: /
