@@ -26,9 +26,29 @@ spec:
       insecure: true
       active: true
       contentType: json
-
 ---
-
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: github-metallb
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+    # websecure
+    # traefik.ingress.kubernetes.io/router.middlewares: public-redirect-http@kubernetescrd
+    external-dns.alpha.kubernetes.io/hostname: nginx.alboroto.live
+spec:
+  rules:
+  - host: webhook.alboroto.live
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: github-eventsource-svc
+            port:
+              number: 12000
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
