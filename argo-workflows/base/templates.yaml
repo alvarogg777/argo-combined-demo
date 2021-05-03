@@ -18,7 +18,8 @@ spec:
       - name: container_image
       - name: container_tag
     container:
-      image: nousefreak/kaniko-debug:v1.3.0-1 # gcr.io/kaniko-project/executor:debug
+      image: nousefreak/kaniko-debug:v1.3.0-1 
+      # image: gcr.io/kaniko-project/executor:debug
       args:
       - --context={{inputs.parameters.repo_url}}#{{inputs.parameters.repo_ref}}#{{inputs.parameters.repo_commit_id}}
       - --destination={{inputs.parameters.container_image}}:{{inputs.parameters.container_tag}}
