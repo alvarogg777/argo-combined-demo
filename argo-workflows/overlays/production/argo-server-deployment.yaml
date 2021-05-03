@@ -10,7 +10,7 @@ spec:
           - server
           - --secure=false
           name: argo-server
-          image: docker.io/argoproj/argocli:latest-linux-arm64
+          image: docker.io/argoproj/argocli:v3.0.2
           readinessProbe:
             httpGet:
               path: /
