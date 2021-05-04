@@ -9,6 +9,8 @@ spec:
         - args:
           - server
           - --secure=false
+          - --executor-image
+          - argoproj/argoexec:latest-linux-arm64
           name: argo-server
           image: docker.io/argoproj/argocli:v3.0.2
           readinessProbe:
