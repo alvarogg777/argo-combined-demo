@@ -9,4 +9,8 @@ spec:
       - name: argocd-server
         image: alinbalutoiu/argocd:v2.0.0
         command: [argocd-server, --staticassets, /shared/app, --insecure]
+        env:
+          - name: ARGOCD_EXEC_TIMEOUT
+            value: "10m"
+          
 
