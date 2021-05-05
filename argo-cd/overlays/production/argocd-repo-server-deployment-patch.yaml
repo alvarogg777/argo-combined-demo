@@ -7,4 +7,5 @@ spec:
     spec:
       containers:
       - name: argocd-repo-server
-        image: alinbalutoiu/argocd:v2.0.0
+        # image: alinbalutoiu/argocd:v2.0.0
+        image: cyrilix/argocd:v2.0.1
