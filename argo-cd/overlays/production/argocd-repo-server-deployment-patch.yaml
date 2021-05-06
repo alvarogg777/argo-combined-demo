@@ -9,3 +9,6 @@ spec:
       - name: argocd-repo-server
         # image: alinbalutoiu/argocd:v2.0.0
         image: cyrilix/argocd:v2.0.1
+        env:
+          - name: ARGOCD_EXEC_TIMEOUT
+            value: "10m"
