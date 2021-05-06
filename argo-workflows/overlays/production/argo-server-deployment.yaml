@@ -13,9 +13,6 @@ spec:
           # - argoproj/argoexec:latest-linux-arm64
           name: argo-server
           image: docker.io/argoproj/argocli:v3.0.2
-          env:
-            - name: ARGOCD_EXEC_TIMEOUT
-              value: "10m"
           readinessProbe:
             httpGet:
               path: /

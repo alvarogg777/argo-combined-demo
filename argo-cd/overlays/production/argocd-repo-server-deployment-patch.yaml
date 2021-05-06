@@ -11,4 +11,4 @@ spec:
         image: cyrilix/argocd:v2.0.1
         env:
           - name: ARGOCD_EXEC_TIMEOUT
-            value: "10m"
+            value: "3m"
