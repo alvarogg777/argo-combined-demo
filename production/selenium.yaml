@@ -1,0 +1,56 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: selenium-grid
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: production
+  source:
+    path: docker-selenium/chart/selenium-grid
+    repoURL: https://github.com/pedrodotmc/docker-selenium.git
+    targetRevision: selenium-grid-helm-chart
+    helm:
+      parameters:
+      - name: router.imageName
+        value: alvarogg777/router
+      - name: router.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: distributor.imageName
+        value: alvarogg777/distributor
+      - name: distributor.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: eventBus.imageName
+        value: alvarogg777/event-bus
+      - name: eventBus.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: sessionMap.imageName
+        value: alvarogg777/sessions
+      - name: sessionMap.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: sessionQueuer.imageName
+        value: alvarogg777/session-queuer
+      - name: sessionQueuer.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: hub.imageName
+        value: alvarogg777/hub
+      - name: hub.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: chromeNode.imageName
+        value: alvarogg777/node-chrome
+      - name: chromeNode.imageTag
+        value: 4.0.0-beta-3-20210422
+      - name: firefoxNode.imageName
+        value: alvarogg777/node-firefox
+      - name: firefoxNode.imageTag
+        value: 4.0.0-beta-3-20210422
+  destination:
+    namespace: selenium-grid
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
