@@ -8,19 +8,19 @@ metadata:
 spec:
   project: production
   source:
-    path: ./
-    repoURL: https://github.com/cetic/helm-mlflow.git
+    path: charts/postgres
+    repoURL: https://github.com/groundhog2k/helm-charts.git
     targetRevision: master
     helm:
       parameters:
-      - name: image.repository
-        value: alborotogarcia/arm64v8
-      - name: image.tag
-        value: arm-mlflow
-      - name backend_store_uri
-        value: postgresql://mlflow:mlflow@postgres.db-system.svc.cluster.local:5432
+      - name: userDatabase.name
+        value: mlflow
+      - name: userDatabase.user
+        value: mlflow
+      - name: userDatabase.password
+        value: mlflow
   destination:
-    namespace: yatai-system
+    namespace: db-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
