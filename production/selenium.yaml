@@ -8,7 +8,7 @@ metadata:
 spec:
   project: production
   source:
-    path: docker-selenium/chart/selenium-grid
+    path: chart/selenium-grid
     repoURL: https://github.com/pedrodotmc/docker-selenium.git
     targetRevision: selenium-grid-helm-chart
     helm:

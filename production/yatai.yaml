@@ -1,18 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio-addons
+  name: yatai
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: production
   source:
-    path: samples/addons
-    repoURL: https://github.com/alvarogg777/istio.git
-    targetRevision: 1.9.4-patch
+    path: helm/YataiService
+    repoURL: https://github.com/bentoml/BentoML
+    targetRevision: master
+    helm:
+      parameters:
+      - name: yatai.image.repo
+        value: alvarogg777/yatai-service
+      - name: yatai.image.version
+        value: 0.12.1
   destination:
-    namespace: istio-system
+    namespace: yatai-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
@@ -20,8 +26,3 @@ spec:
       prune: true
     syncOptions:
     - CreateNamespace=true
-  ignoreDifferences:
-  - group: admissionregistration.k8s.io
-    kind: MutatingWebhookConfiguration
-    jsonPointers:
-    - /webhooks
