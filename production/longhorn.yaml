@@ -8,7 +8,7 @@ metadata:
 spec:
   project: production
   source:
-    path: longhorn
+    path: charts/longhorn
     repoURL: https://github.com/longhorn/charts.git
     targetRevision: master
   destination:
