@@ -18,7 +18,7 @@ spec:
       - name: image.tag
         value: arm-mlflow
       - name backend_store_uri
-        value: postgresql://mlflow:mlflow@postgres.db-system.svc.cluster.local:5432
+        value: "postgresql://mlflow:mlflow@postgres.db-system.svc.cluster.local:5432"
   destination:
     namespace: yatai-system
     server: https://kubernetes.default.svc
