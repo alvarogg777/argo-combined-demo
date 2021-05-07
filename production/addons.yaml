@@ -8,7 +8,7 @@ metadata:
 spec:
   project: production
   source:
-    path: istio/samples/addons
+    path: samples/addons
     repoURL: https://github.com/alvarogg777/istio.git
     targetRevision: 1.9.4-patch
     # helm:
