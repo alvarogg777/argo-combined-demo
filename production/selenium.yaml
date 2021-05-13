@@ -13,25 +13,27 @@ spec:
     targetRevision: selenium-grid-helm-chart
     helm:
       parameters:
-      - name: router.imageName
+      - name: isolateComponents
+        value: true
+      - name: components.router.imageName
         value: alvarogg777/router
-      - name: router.imageTag
+      - name: components.router.imageTag
         value: 4.0.0-beta-3-20210422
-      - name: distributor.imageName
+      - name: components.distributor.imageName
         value: alvarogg777/distributor
-      - name: distributor.imageTag
+      - name: components.distributor.imageTag
         value: 4.0.0-beta-3-20210422
-      - name: eventBus.imageName
+      - name: components.eventBus.imageName
         value: alvarogg777/event-bus
-      - name: eventBus.imageTag
+      - name: components.eventBus.imageTag
         value: 4.0.0-beta-3-20210422
-      - name: sessionMap.imageName
+      - name: components.sessionMap.imageName
         value: alvarogg777/sessions
-      - name: sessionMap.imageTag
+      - name: components.sessionMap.imageTag
         value: 4.0.0-beta-3-20210422
-      - name: sessionQueuer.imageName
+      - name: components.sessionQueuer.imageName
         value: alvarogg777/session-queuer
-      - name: sessionQueuer.imageTag
+      - name: components.sessionQueuer.imageTag
         value: 4.0.0-beta-3-20210422
       - name: hub.imageName
         value: alvarogg777/hub
@@ -45,8 +47,11 @@ spec:
         value: alvarogg777/node-firefox
       - name: firefoxNode.imageTag
         value: 4.0.0-beta-3-20210422
+      - name: operaNode.enabled
+        value: false
+        
   destination:
-    namespace: selenium-grid
+    namespace: selenium-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
