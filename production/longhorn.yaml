@@ -11,6 +11,8 @@ spec:
     path: charts/longhorn
     repoURL: https://github.com/longhorn/charts.git
     targetRevision: master
+    helm:
+      parameters:
   destination:
     namespace: longhorn-system
     server: https://kubernetes.default.svc
