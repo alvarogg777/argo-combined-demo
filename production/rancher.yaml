@@ -15,9 +15,9 @@ spec:
       parameters:
         - name: hostname
           value: rancher.example.com
-        - name: ingress.extraAnnotations
-          value: 
-            - kubernetes.io/ingress.class: nginx
+        #- name: ingress.extraAnnotations
+        #  value: 
+        #    - kubernetes.io/ingress.class: nginx
   destination:
     namespace: cattle-system
     server: https://kubernetes.default.svc
