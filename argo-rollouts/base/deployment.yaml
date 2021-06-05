@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: argo-rollouts
-          image: hi1280/argo-rollouts:v0.10.2
+          image: quay.io/argoproj/argo-events:v1.0.1
