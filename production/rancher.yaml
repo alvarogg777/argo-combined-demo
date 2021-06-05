@@ -10,7 +10,7 @@ spec:
   source:
     path: chart
     repoURL: https://github.com/rancher/rancher.git
-    targetRevision: master
+    targetRevision: v2.5.8
     helm:
       parameters:
         - value: traefik
