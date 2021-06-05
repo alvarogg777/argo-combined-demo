@@ -1,22 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager
+  name: yatai
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: production
   source:
-    path: deploy/charts/cert-manager
-    repoURL: https://github.com/jetstack/cert-manager.git
+    path: helm/YataiService
+    repoURL: https://github.com/bentoml/BentoML
     targetRevision: master
     helm:
       parameters:
-      - name: installCRDs
-        value: "true"
+      - name: yatai.image.repo
+        value: alvarogg777/yatai-service
+      - name: yatai.image.version
+        value: 0.12.1
   destination:
-    namespace: cert-manager
+    namespace: yatai-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
