@@ -14,7 +14,7 @@ spec:
     helm:
       parameters:
       - name: isolateComponents
-        value: true
+        value: "true"
       - name: components.router.imageName
         value: seleniarm/router
       - name: components.router.imageTag
@@ -48,7 +48,7 @@ spec:
       - name: firefoxNode.imageTag
         value: 4.0.0-beta-1-20210215
       - name: operaNode.enabled
-        value: false
+        value: "false"
         
   destination:
     namespace: selenium-system
