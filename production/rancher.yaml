@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: rancher
+    namespace: argocd
+    finalizers:
+      - resources-finalizer.argocd.argoproj.io
+spec:
+  project: production
+  source:
+    path: chart
+    repoURL: https://github.com/rancher/rancher.git
+    targetRevision: master
+    helm:
+      parameters:
+        - value: traefik
+        - name: hostname
+          value: rancher.example.com
+        - name: ingress.tls.source
+          value: letsEncrypt
+        - name: ingress.tls.hosts
+          value: rancher.example.com
+        - name: letsEncrypt.email
+          value: alborotogarcia777@gmail.com
+        - name: letsEncrypt.ingress.class
+          value: traefik
+    chart: rancher
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: cattle-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
