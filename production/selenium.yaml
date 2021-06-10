@@ -16,37 +16,37 @@ spec:
       - name: isolateComponents
         value: "true"
       - name: components.router.imageName
-        value: seleniarm/router
+        value: alvarogg777/selenium
       - name: components.router.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: router # 4.0.0-beta-1-20210215
       - name: components.distributor.imageName
-        value: seleniarm/distributor
+        value: alvarogg777/selenium
       - name: components.distributor.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: distributor
       - name: components.eventBus.imageName
-        value: seleniarm/event-bus
+        value: alvarogg777/selenium
       - name: components.eventBus.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: event-bus
       - name: components.sessionMap.imageName
-        value: seleniarm/sessions
+        value: alvarogg777/selenium
       - name: components.sessionMap.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: sessions
       - name: components.sessionQueuer.imageName
-        value: seleniarm/session-queuer
+        value: alvarogg777/selenium
       - name: components.sessionQueuer.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: session-queuer
       - name: hub.imageName
-        value: seleniarm/hub
+        value: alvarogg777/selenium
       - name: hub.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: hub
       - name: chromeNode.imageName
-        value: seleniarm/node-chromium
+        value: alvarogg777/selenium
       - name: chromeNode.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: node-chrome
       - name: firefoxNode.imageName
-        value: seleniarm/node-firefox
+        value: alvarogg777/selenium
       - name: firefoxNode.imageTag
-        value: 4.0.0-beta-1-20210215
+        value: node-firefox
       - name: operaNode.enabled
         value: "false"
         
