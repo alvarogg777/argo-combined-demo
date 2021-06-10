@@ -10,7 +10,7 @@ spec:
   source:
     path: helm-dry-4.1.1
     repoURL: https://github.com/alvarogg777/operator.git
-    targetRevision: v4.1.1
+    targetRevision: patch-4.1.1
   destination:
     namespace: minio-operator
     server: https://kubernetes.default.svc
