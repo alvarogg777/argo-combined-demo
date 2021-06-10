@@ -17,6 +17,8 @@ spec:
         value: alvarogg777/yatai-service
       - name: yatai.image.version
         value: 0.12.1
+      - name: service.type
+        value: ClusterIP
   destination:
     namespace: yatai-system
     server: https://kubernetes.default.svc
