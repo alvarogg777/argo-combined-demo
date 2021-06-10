@@ -9,7 +9,7 @@ spec:
   project: production
   source:
     path: chart
-    repoURL: https://github.com/rancher/rancher.git
+    repoURL: https://releases.rancher.com/server-charts/latest # https://github.com/rancher/rancher.git
     targetRevision: v2.5.8
     helm:
       parameters:
