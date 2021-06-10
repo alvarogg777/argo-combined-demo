@@ -9,5 +9,5 @@ spec:
         - name: eventsource-controller
           image: alvarogg777/eventsource-controller:v1.3.1
           env:
-            - name: EVENT_SOURCE_IMAGE
+            - name: EVENTSOURCE_IMAGE
               value: alvarogg777/eventsource:v1.3.1
