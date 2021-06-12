@@ -20,7 +20,7 @@ spec:
       - name: service.type
         value: ClusterIP
   destination:
-    namespace: yatai-system
+    namespace: ml-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:

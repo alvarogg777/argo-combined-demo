@@ -8,11 +8,11 @@ metadata:
 spec:
   project: production
   source:
-    path: helm-dry-4.1.1
-    repoURL: https://github.com/alvarogg777/operator.git
-    targetRevision: patch-4.1.1
+    path: ./
+    repoURL: https://github.com/alvarogg777/minio-charts.git
+    targetRevision: patch-02-14
   destination:
-    namespace: minio-operator
+    namespace: storage-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
