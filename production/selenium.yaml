@@ -8,48 +8,9 @@ metadata:
 spec:
   project: production
   source:
-    path: chart/selenium-grid
-    repoURL: https://github.com/pedrodotmc/docker-selenium.git
-    targetRevision: selenium-grid-helm-chart
-    helm:
-      parameters:
-      - name: isolateComponents
-        value: "true"
-      - name: components.router.imageName
-        value: alvarogg777/router
-      - name: components.router.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: components.distributor.imageName
-        value: alvarogg777/distributor
-      - name: components.distributor.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: components.eventBus.imageName
-        value: alvarogg777/event-bus
-      - name: components.eventBus.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: components.sessionMap.imageName
-        value: alvarogg777/sessions
-      - name: components.sessionMap.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: components.sessionQueuer.imageName
-        value: alvarogg777/session-queue
-      - name: components.sessionQueuer.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: hub.imageName
-        value: alvarogg777/hub
-      - name: hub.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: chromeNode.imageName
-        value: alvarogg777/node-chromium
-      - name: chromeNode.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: firefoxNode.imageName
-        value: alvarogg777/node-firefox
-      - name: firefoxNode.imageTag
-        value: 4.0.0-beta-4-20210610
-      - name: operaNode.enabled
-        value: "false"
-        
+    path: chart/manifests
+    repoURL: https://github.com/alvarogg777/docker-selenium.git
+    targetRevision: patch-4.0.0-beta-4-20210608
   destination:
     namespace: selenium-system
     server: https://kubernetes.default.svc
