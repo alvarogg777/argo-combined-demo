@@ -3,7 +3,12 @@ kind: Kustomization
 resources:
 - ../../base
 - ingress-traefik.yaml
-- https://raw.githubusercontent.com/alvaro gg777/argo-combined-demo/master/argo-workflows/overlays/production/regcred.yaml
+- https://raw.githubusercontent.com/alvarogg777/argo-combined-demo/master/argo-workflows/overlays/production/regcred.yaml
+patchesStrategicMerge:
+- argocd-application-controller-statefulset-patch.yaml
+- argocd-dex-server-deployment-patch.yaml
+- argocd-repo-server-deployment-patch.yaml
+- argocd-server-deployment-patch.yaml
 patches:
 - path: redis_patch.json
   target:
@@ -11,13 +16,8 @@ patches:
     version: v1
     kind: Deployment
     name: argocd-redis
-- path: regcred_patch.json
-  target:
-    group: apps
-    version: v1
-patchesStrategicMerge:
-- argocd-application-controller-statefulset-patch.yaml
-- argocd-dex-server-deployment-patch.yaml
-- argocd-repo-server-deployment-patch.yaml
-- argocd-server-deployment-patch.yaml
+#- path: regcred_patch.json
+#  target:
+#    group: apps
+#    version: v1
 namespace: argocd

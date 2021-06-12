@@ -8,17 +8,9 @@ metadata:
 spec:
   project: production
   source:
-    path: helm/YataiService
-    repoURL: https://github.com/bentoml/BentoML
-    targetRevision: master
-    helm:
-      parameters:
-      - name: yatai.image.repo
-        value: alvarogg777/yatai-service
-      - name: yatai.image.version
-        value: 0.12.1
-      - name: service.type
-        value: ClusterIP
+    path: helm/manifests
+    repoURL: https://github.com/alvarogg777/BentoML
+    targetRevision: patch-0.12.1
   destination:
     namespace: ml-system
     server: https://kubernetes.default.svc

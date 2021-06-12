@@ -9,8 +9,8 @@ spec:
   project: production
   source:
     path: ./
-    repoURL: https://github.com/cetic/helm-mlflow.git
-    targetRevision: master
+    repoURL: https://github.com/alvarogg777/helm-mlflow.git
+    targetRevision: 1.13.1
     helm:
       parameters:
       - name: image.repository

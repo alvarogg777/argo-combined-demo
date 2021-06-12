@@ -8,9 +8,9 @@ metadata:
 spec:
   project: production
   source:
-    path: charts/longhorn
-    repoURL: https://github.com/longhorn/charts.git
-    targetRevision: master
+    path: charts/manifests
+    repoURL: https://github.com/alvarogg777/longhorn-charts.git
+    targetRevision: patch-1.1.1
   destination:
     namespace: longhorn-system
     server: https://kubernetes.default.svc
