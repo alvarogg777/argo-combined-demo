@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: regcred
+  namespace: argo-rollouts
+spec:
+  encryptedData:
+    .dockerconfigjson: AgBM5r1VkNLfiUWBYJYg7WTCfETjabJ2cyGHK4SWeq1n8dzJm0unbo1IhZqhSnK64KWEpYIZWEo3WddWHdsRAmIe5YBFCjkDHGEBpvMlf2XBApe2IbCkrFMSRNCiZhyova6IYXTZe75qHoa6bdKlUWaJ0vxbHPjwnSTJqYMe/INgopCaMqDDl76+4WWOeLcZxjv9sZtSUn7eIAVklz8jZCd4FJl4DSR5q3lvQeQiSY3HUVXC1gwzPeWGti//c0296XuWAfjNDTPmKeclBPHRbiRg2Jt3pouIXIilLDTGaJITpiYYPraq0rP8EIhP7X9vT4FJ1kdT0RVpvlu63TDEZBCptzuG5blKmiu3i2Qq0JeUsw4OcrUg5aL5zn5PvHAQeb5NbpAGTdGlhXuQfydB7BAmxH0P5XrWjTdZkEVhyPoLj8mzIWnjyckbOHwBdeLhEBqYFnYRpgY+0hWHFGlIlmL1e8gsGoucW1XdtLmEbN5t65elVOSMNkxhnRVEGolox4oR4lBdJG5A8tmM0Vb1hMfLzO2rt+e7LG780kFFOSgwv1ScA/cFXXTzRysgSrWiUsPd+6lgl56afXfGuaoBvNkT7wDWgn2t+ijcRQglbe423iueKC87YlDdkfb9fSVK/0khmqDn/M7lNMNwvHGkgHWIh1TsmDuaI2oOk3quo4PD5IWHHp16V5f7ekRD3t9pDDPbqTmQqLAT75ja34hprUj1gmTI8B5SWS70BvA5gEBavH/Ftqq3JEqyeb16BLqr/6DOa1oA6gEyMoO28Hdfw5jW9TiZUg0Sis+aYxjS4dx6vN3NeOSauG2QRQMT2CEfPcLluR22Cgko5bUpYUxyaxGNXIPhiKywDBc3iFdpPauT65xx46pn0zLJji+NUjuJieVBqg6HXRR6dnshRxYS2NnWVia/hezo
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: regcred
+      namespace: argo-rollouts
+    type: kubernetes.io/dockerconfigjson
+
