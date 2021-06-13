@@ -8,17 +8,9 @@ metadata:
 spec:
   project: production
   source:
-    path: ./
+    path: ./manifests
     repoURL: https://github.com/alvarogg777/helm-mlflow.git
-    targetRevision: 1.13.1
-    helm:
-      parameters:
-      - name: image.repository
-        value: alborotogarcia/arm64v8
-      - name: image.tag
-        value: arm-mlflow
-      - name: backend_store_uri
-        value: "postgresql://mlflow:mlflow@postgres.storage-system.svc.cluster.local:5432"
+    targetRevision: patch-1.13.1
   destination:
     namespace: ml-system
     server: https://kubernetes.default.svc
