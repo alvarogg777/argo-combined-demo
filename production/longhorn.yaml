@@ -12,7 +12,7 @@ spec:
     repoURL: https://github.com/alvarogg777/longhorn-charts.git
     targetRevision: patch-1.1.1
   destination:
-    namespace: longhorn-system
+    namespace: storage-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
