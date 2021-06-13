@@ -15,22 +15,22 @@ spec:
       parameters:
       - name: userDatabase.name
         value: mlflow
-      #- name: userDatabase.user
-      #  value: mlflow
-      #- name: userDatabase.password
-      #  value: mlflow
+      - name: userDatabase.user
+        value: mlflow
+      - name: userDatabase.password
+        value: mlflow
       - name: imagePullSecrets
         value: regcred
-      - name: env.POSTGRESS_USER
-        valueFrom:
-          secretKeyRef: 
-            name: storage-secrets
-            key: POSTGRESS_USER
-      - name: env.POSTGRESS_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: storage-secrets
-            key: POSTGRESS_PASSWORD
+      #- name: env.POSTGRESS_USER
+      #  valueFrom:
+      #    secretKeyRef: 
+      #      name: storage-secrets
+      #      key: POSTGRESS_USER
+      #- name: env.POSTGRESS_PASSWORD
+      #  valueFrom:
+      #    secretKeyRef:
+      #      name: storage-secrets
+      #      key: POSTGRESS_PASSWORD
   destination:
     namespace: storage-system
     server: https://kubernetes.default.svc
