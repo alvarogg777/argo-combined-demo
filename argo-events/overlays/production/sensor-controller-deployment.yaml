@@ -5,6 +5,8 @@ metadata:
 spec:
   template:
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: sensor-controller
           image: alvarogg777/sensor-controller:v1.3.1

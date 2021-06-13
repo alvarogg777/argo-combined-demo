@@ -5,6 +5,7 @@ resources:
 - event-sources.yaml
 - sensors.yaml
 - githubcred.yaml
+- regcred.yaml
 patchesStrategicMerge:
 - eventbus-controller-deployment.yaml
 - sensor-controller-deployment.yaml

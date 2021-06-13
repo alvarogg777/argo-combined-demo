@@ -5,6 +5,8 @@ metadata:
 spec:
   template:
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: eventbus-controller
           image: alvarogg777/eventbus-controller:v1.3.1
