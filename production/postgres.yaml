@@ -19,8 +19,8 @@ spec:
         value: mlflow
       - name: userDatabase.password
         value: mlflow
-      - name: imagePullSecrets
-        value: regcred
+      #- name: imagePullSecrets
+      #  value: regcred
       #- name: env.POSTGRESS_USER
       #  valueFrom:
       #    secretKeyRef: 
