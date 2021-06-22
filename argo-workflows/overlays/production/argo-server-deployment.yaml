@@ -14,7 +14,7 @@ spec:
           # - --executor-image
           # - argoproj/argoexec:latest-linux-arm64
           name: argo-server
-          image: docker.io/argoproj/argocli:v3.0.7
+          image: docker.io/argoproj/argocli:v3.1.0
           readinessProbe:
             httpGet:
               path: /
