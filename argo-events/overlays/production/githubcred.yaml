@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: github-access
+  namespace: argo-events
+spec:
+  encryptedData:
+    token: AgC89MH3l1mhMGowpcxIF5LplBPqVyNU2FjrXX51DtKkbbjM2bxVLgvQ77NL34BnuPZ8NGZy5YVSpMxww5SamoON/C64dCIEkWCCOHKWYGjSrAYnJmP48yhpdxEECb5z+RLxNR6bA65jzgjbjFP3B8L2fV8b8j1BKlJWm7r0AAt0EseJqeIaL/KBnlm4F6lVZR4TK/Su37geH1oQTwukNR6kJRjFYiKZ0z51bAtWzWMzOATdX15dVxKui+RZs5aaQNDijJGN80miAZW1jQvVmxf7orQr6juM13agQy8sIh0/8U16FtidHM2/DZTMFvIqqHkBwsg2w6KdVXq/EB7usfoPnrkpG3BAWMNBFdNAg2DOodhA5MMb5Ebzn2h9jo9x1TjUSRzyA2oCelPFmsLMrr7d0Bp3+VSrpd89hBgKptiTn+IoOMl5iBj5YtLgGwaQDZhJhJVp951IAoIW4JIWa1s/DaiZ1o61nkJvUIQEUyPgE/QHMpCi7ryRZn4uKn1TnpMPp9GugGVC9gyuHYxDAK0KqpZguiGTgPS7s3kuTu9bCaALTwqs8LzJ2stSHtmnHBKaN7XqhtGLedvXU087agDRe9Q8yOM330g1NdEu32wyGuNPQy8Cc4HWlvEKMyjw8EBzeeokOICUGqCikpfoRmMAwxDZUak+pV6t/SvMZ132Dr3J/HJhSM+4EmgVJVyxDKE8pcRrLv8hINebTYlN6Sh/zq4mXqa4bagyJc7m7gZkWW28sgk6ubIt
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: github-access
+      namespace: argo-events
+    type: Opaque
+
