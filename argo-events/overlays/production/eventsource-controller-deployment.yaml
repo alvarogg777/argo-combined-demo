@@ -13,3 +13,5 @@ spec:
           env:
             - name: EVENTSOURCE_IMAGE
               value: alvarogg777/eventsource:v1.3.1
+            - name: TZ
+              value: Europe/Madrid

@@ -11,4 +11,6 @@ spec:
       - name: argocd-server
         image: cyrilix/argocd:v2.0.4
         command: [argocd-server, --staticassets, /shared/app, --insecure]
-
+        env:
+          - name: TZ
+            value: Europe/Madrid
