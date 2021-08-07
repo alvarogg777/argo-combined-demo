@@ -12,7 +12,7 @@ spec:
     repoURL: https://github.com/alvarogg777/auth.git
     targetRevision: master
   destination:
-    namespace: auth
+    namespace: istio-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
