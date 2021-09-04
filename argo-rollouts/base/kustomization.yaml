@@ -4,9 +4,12 @@ resources:
 - namespace.yaml
 - clusterrolebinding.yaml
 - github.com/argoproj/argo-rollouts/manifests/crds
-- github.com/argoproj/argo-rollouts/manifests/base
+- github.com/argoproj/argo-rollouts/manifests/base/argo-rollouts-sa.yaml
+- deployment.yaml
+- github.com/argoproj/argo-rollouts/manifests/base/argo-rollouts-roles.yaml
+- github.com/argoproj/argo-rollouts/manifests/base/argo-rollouts-service.yaml
 - github.com/argoproj/argo-rollouts/manifests/role
 - regcred.yaml
-patches:
-- deployment.yaml
+# patches:
+#- deployment.yaml
 namespace: argo-rollouts
