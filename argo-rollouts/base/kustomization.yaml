@@ -4,11 +4,12 @@ resources:
 - namespace.yaml
 - clusterrolebinding.yaml
 - github.com/argoproj/argo-rollouts/manifests/crds
+- https://raw.githubusercontent.com/argoproj/argo-rollouts/master/manifests/base/argo-rollouts-sa.yaml
+- deployment.yaml
+- https://raw.githubusercontent.com/argoproj/argo-rollouts/master/manifests/base/argo-rollouts-aggregate-roles.yaml
 - https://raw.githubusercontent.com/argoproj/argo-rollouts/master/manifests/base/argo-rollouts-metrics-service.yaml
 # - github.com/argoproj/argo-rollouts/manifests/base/argo-rollouts-sa.yaml
-- deployment.yaml
-- https://raw.githubusercontent.com/argoproj/argo-rollouts/master/manifests/base/argo-rollouts-roles.yaml
-- https://raw.githubusercontent.com/argoproj/argo-rollouts/master/manifests/base/argo-rollouts-service.yaml
+- https://raw.githubusercontent.com/argoproj/argo-rollouts/master/manifests/base/argo-rollouts-notification-secret.yaml
 - github.com/argoproj/argo-rollouts/manifests/role
 - regcred.yaml
 # patches:
