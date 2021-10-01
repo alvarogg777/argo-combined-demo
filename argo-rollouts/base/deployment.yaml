@@ -18,7 +18,7 @@ spec:
       serviceAccountName: argo-rollouts
       containers:
       - name: argo-rollouts
-        image: quay.io/argoproj/argo-rollouts:v1.0.6
+        image: quay.io/argoproj/argo-rollouts:v1.1.0-rc2
         imagePullPolicy: Always
         env:
           - name: TZ
