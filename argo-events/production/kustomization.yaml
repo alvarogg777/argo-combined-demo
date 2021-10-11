@@ -1,0 +1,10 @@
+resources:
+  - namespace.yaml
+  - namespace-install.yaml
+  - native.yaml
+  - install-validating-webhook.yaml
+#  - github.com/argoproj/argo-events/examples/eventbus/native.yaml
+#  - github.com/argoproj/argo-events/manifests/install-validating-webhook.yaml
+# bases:
+#   - github.com/argoproj/argo-events/manifests/namespace-install
+namespace: argo-events
