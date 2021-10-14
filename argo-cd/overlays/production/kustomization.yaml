@@ -5,6 +5,9 @@ resources:
 - ingress-traefik.yaml
 - regcred.yaml
 patchesStrategicMerge:
+- argocd-cm.yaml
+- argocd-secret.yaml
+- argocd-rbac-cm.yaml
 - argocd-application-controller-statefulset-patch.yaml
 - argocd-dex-server-deployment-patch.yaml
 - argocd-repo-server-deployment-patch.yaml
