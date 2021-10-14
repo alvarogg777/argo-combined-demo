@@ -226,7 +226,7 @@ spec:
           value: nats-streaming:0.22.1
         - name: NATS_METRICS_EXPORTER_IMAGE
           value: alvarogg777/prometheus-nats-exporter:0.6.2
-        image: quay.io/argoproj/argo-events:v1.4.3
+        image: quay.io/argoproj/argo-events:v1.5.0
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -267,14 +267,14 @@ spec:
         - --namespaced
         env:
         - name: EVENTSOURCE_IMAGE
-          value: quay.io/argoproj/argo-events:v1.4.3
+          value: quay.io/argoproj/argo-events:v1.5.0
         - name: NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
         - name: TZ
           value: Europe/Madrid
-        image: quay.io/argoproj/argo-events:v1.4.3
+        image: quay.io/argoproj/argo-events:v1.5.0
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -315,14 +315,14 @@ spec:
         - --namespaced
         env:
         - name: SENSOR_IMAGE
-          value: quay.io/argoproj/argo-events:v1.4.3
+          value: quay.io/argoproj/argo-events:v1.5.0
         - name: NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
         - name: TZ
           value: Europe/Madrid
-        image: quay.io/argoproj/argo-events:v1.4.3
+        image: quay.io/argoproj/argo-events:v1.5.0
         livenessProbe:
           httpGet:
             path: /healthz
