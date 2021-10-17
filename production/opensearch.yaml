@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio-addons
+  name: storage
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: production
   source:
-    path: samples/addons
-    repoURL: https://github.com/alvarogg777/istio.git
-    targetRevision: patch-1.11.4
+    path: charts/manifests
+    repoURL: https://github.com/alborotogarcia/postgres.git
+    targetRevision: master
   destination:
-    namespace: istio-system
+    namespace: storage
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
@@ -20,8 +20,3 @@ spec:
       prune: true
     syncOptions:
     - CreateNamespace=true
-  ignoreDifferences:
-  - group: admissionregistration.k8s.io
-    kind: MutatingWebhookConfiguration
-    jsonPointers:
-    - /webhooks
