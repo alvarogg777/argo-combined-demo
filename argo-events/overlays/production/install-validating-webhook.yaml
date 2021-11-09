@@ -107,9 +107,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        - name: TZ
-          value: Europe/Madrid
-        image: quay.io/argoproj/argo-events:v1.4.2
+        image: quay.io/argoproj/argo-events:v1.5.1
         imagePullPolicy: Always
         name: webhook
       serviceAccountName: argo-events-webhook-sa
