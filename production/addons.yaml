@@ -10,7 +10,7 @@ spec:
   source:
     path: samples/addons
     repoURL: https://github.com/alvarogg777/istio.git
-    targetRevision: patch-1.11.4
+    targetRevision: patch-1.12.0
   destination:
     namespace: istio-system
     server: https://kubernetes.default.svc
