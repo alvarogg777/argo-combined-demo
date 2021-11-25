@@ -7,6 +7,9 @@ spec:
     spec:
       imagePullSecrets:
       - name: regcred
+      initContainers:
+        - name: copyutil
+          image: alvarogg777/argocd:v2.1.7
       containers:
       - name: argocd-repo-server
         image: alvarogg777/argocd:v2.1.7
