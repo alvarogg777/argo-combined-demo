@@ -12,7 +12,7 @@ spec:
     repoURL: https://github.com/alborotogarcia/helm-kafka
     targetRevision: master
   destination:
-    namespace: ml
+    namespace: cp
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
