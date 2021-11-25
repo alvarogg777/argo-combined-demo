@@ -9,7 +9,7 @@ spec:
   project: production
   source:
     path: ./
-    repoURL: https://github.com/alborotogarcia/postgres.git
+    repoURL: https://github.com/alborotogarcia/storage.git
     targetRevision: master
   destination:
     namespace: storage
