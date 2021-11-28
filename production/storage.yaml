@@ -10,7 +10,7 @@ spec:
   source:
     path: ./
     repoURL: https://github.com/alborotogarcia/storage.git
-    targetRevision: master
+    targetRevision: patch-1.7.1
   destination:
     namespace: storage
     server: https://kubernetes.default.svc
