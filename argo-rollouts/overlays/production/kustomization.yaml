@@ -2,10 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - namespace.yaml
-- ../../base/manifests/base
-- ../../base/manifests/role
 - ../../base/manifests/cluster-install
-- ../../base/manifests/crds
 - ../../base/manifests/notifications
 - ../../base/manifests/dashboard-install
 - ingress.yaml
