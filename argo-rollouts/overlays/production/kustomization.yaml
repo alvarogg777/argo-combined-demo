@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - ../../base/manifests/base
-- ../../base/manifests/roles
+- ../../base/manifests/role
 - ../../base/manifests/cluster-install
 - ../../base/manifests/crds
 - ../../base/manifests/notifications
