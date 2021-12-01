@@ -7,3 +7,6 @@ resources:
 - ../../base/manifests/dashboard-install
 - ingress.yaml
 namespace: argo-rollouts
+patchesStrategicMerge:
+- dashboard-deployment.yaml
+
