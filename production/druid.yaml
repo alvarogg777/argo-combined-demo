@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: druid
-  namespace: druid
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -12,7 +12,7 @@ spec:
     repoURL: https://gitlab.com/alborotogarcia/helm-druid
     targetRevision: master
   destination:
-    namespace: cp
+    namespace: druid
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
