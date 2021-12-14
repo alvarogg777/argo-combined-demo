@@ -10,7 +10,7 @@ data:
   oidc.config: |
     name: Keycloak
     issuer: https://kc.alboroto.live/auth/realms/alborotoproject
-    clientID: argocd
+    clientID: argo-cd.alboroto.live
     clientSecret: $oidc.keycloak.clientSecret
     requestedScopes: ["openid", "profile", "email", "groups"]
     requestedIDTokenClaims: {"groups": {"essential": true}}
