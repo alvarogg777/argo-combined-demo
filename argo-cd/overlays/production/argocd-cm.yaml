@@ -12,6 +12,6 @@ data:
     issuer: https://kc.alboroto.live/auth/realms/alborotoproject
     clientID: argo-cd.alboroto.live
     clientSecret: $oidc.keycloak.clientSecret
-    requestedScopes: ["openid", "profile", "email", "groups"]
-    requestedIDTokenClaims: {"groups": {"essential": true}}
+    requestedScopes: ["openid", "profile", "email", "argocd-groups"]
+    requestedIDTokenClaims: {"argocd-group": {"essential": true}}
 
