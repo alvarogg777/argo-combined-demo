@@ -9,7 +9,7 @@ spec:
       - name: regcred
       initContainers:
       - name: copyutil
-        image: alvarogg777/argocd:v2.1.7
+        image: alvarogg777/argocd:v2.2.0
         env:
           - name: TZ
             value: Europe/Madrid
