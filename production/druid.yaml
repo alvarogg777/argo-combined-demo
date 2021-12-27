@@ -10,7 +10,7 @@ spec:
   source:
     path: ./helm/druid
     repoURL: https://gitlab.com/alborotogarcia/helm-druid
-    targetRevision: master
+    targetRevision: s3
   destination:
     namespace: druid
     server: https://kubernetes.default.svc
