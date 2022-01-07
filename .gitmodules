@@ -3,8 +3,8 @@
 	url = https://github.com/argoproj/argo-cd.git
 	branch = master
 
-[submodule "argo-rollouts/base"]
-	path = argo-rollouts/base
+[submodule "argo-rollouts/base/argo-rollouts"]
+	path = argo-rollouts/base/argo-rollouts
 	url = https://github.com/argoproj/argo-rollouts
 [submodule "argo-workflows/base/argo-workflows"]
 	path = argo-workflows/base/argo-workflows
