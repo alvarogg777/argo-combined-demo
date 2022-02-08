@@ -10,7 +10,7 @@ spec:
       containers:
       - name: argocd-application-controller
         # image: alinbalutoiu/argocd:v2.0.3
-        image: alvarogg777/argocd:v2.2.3
+        image: alvarogg777/argocd:v2.2.5
         env:
           - name: TZ
             value: Europe/Madrid

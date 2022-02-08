@@ -6,11 +6,11 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
 data:
-  url: https://argo-cd.alboroto.live
+  url: https://argo-cd.alchys.tech
   oidc.config: |
     name: Keycloak
-    issuer: https://kc.alboroto.live/auth/realms/alborotoproject
-    clientID: argo-cd.alboroto.live
+    issuer: https://kc.alchys.tech/auth/realms/alborotoproject
+    clientID: argo-cd.alchys.tech
     clientSecret: $oidc.keycloak.clientSecret
     requestedScopes: ["openid", "profile", "email", "argocd-groups"]
     requestedIDTokenClaims: {"argocd-group": {"essential": true}}

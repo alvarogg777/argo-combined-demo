@@ -8,7 +8,7 @@ spec:
   - web
   - websecure
   routes: 
-  - match: Host(`workflows.alboroto.live`) 
+  - match: Host(`workflows.achlys.tech`)
     kind: Rule 
     services: 
     - name: argo-server

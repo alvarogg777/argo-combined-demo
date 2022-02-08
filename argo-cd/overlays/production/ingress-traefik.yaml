@@ -21,4 +21,4 @@ spec:
            name: argocd-server
            port:
              number: 80
-    host: argo-cd.alboroto.live
+    host: argo-cd.achlys.tech
