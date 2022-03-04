@@ -334,3 +334,4 @@ spec:
         runAsNonRoot: true
         runAsUser: 9731
       serviceAccountName: argo-events-sa
+viceAccountName: argo-events-sa
