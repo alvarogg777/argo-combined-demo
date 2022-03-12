@@ -15,4 +15,4 @@ spec:
             value: Europe/Madrid
       containers:
       - name: dex
-        image: dexidp/dex:v2.30.0
+        image: dexidp/dex:v2.31.0
