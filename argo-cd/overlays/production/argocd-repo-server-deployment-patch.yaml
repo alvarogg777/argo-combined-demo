@@ -9,10 +9,10 @@ spec:
       - name: regcred
       initContainers:
         - name: copyutil
-          image: quay.io/argoproj/argocd:v2.3.0
+          image: quay.io/argoproj/argocd:v2.3.1
       containers:
       - name: argocd-repo-server
-        image: quay.io/argoproj/argocd:v2.3.0
+        image: quay.io/argoproj/argocd:v2.3.1
         env:
           - name: ARGOCD_EXEC_TIMEOUT
             value: "8m"
