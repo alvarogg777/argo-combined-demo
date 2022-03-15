@@ -8,3 +8,4 @@ resources:
 patchesStrategicMerge:
 - argo-server-deployment.yaml
 - workflow-controller-deployment.yaml
+- argo-server-role.yaml
