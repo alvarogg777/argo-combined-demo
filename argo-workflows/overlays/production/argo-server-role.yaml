@@ -5,6 +5,20 @@ metadata:
   namespace: argo
 rules:
 - apiGroups:
+    - coordination.k8s.io
+  resources:
+    - leases
+  verbs:
+    - create
+    - get
+    - update
+- apiGroups:
+    - ""
+  resources:
+    - secrets
+  verbs:
+    - get
+- apiGroups:
   - dataflow.argoproj.io
   resources:
   - pipelines
