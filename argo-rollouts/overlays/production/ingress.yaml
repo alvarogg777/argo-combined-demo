@@ -5,7 +5,7 @@ metadata:
   namespace: argo-rollouts
 spec:
   rules:
-  - host: rollouts.aclhys.tech
+  - host: rollouts.achlys.tech
     http:
       paths:
       - path: /
