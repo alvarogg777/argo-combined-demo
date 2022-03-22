@@ -9,4 +9,5 @@ resources:
 namespace: argo-rollouts
 patchesStrategicMerge:
 - dashboard-deployment.yaml
+- rollouts-deployment.yaml
 

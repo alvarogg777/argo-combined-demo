@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argo-rollouts
+spec:
+  template:
+    spec:
+      containers:
+        - name: argo-rollouts
+          image: quay.io/argoproj/argo-rollouts:v1.2.0
+          env:
+            - name: TZ
+              value: Europe/Madrid
+

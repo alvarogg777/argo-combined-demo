@@ -7,7 +7,8 @@ spec:
     spec:
       containers:
         - name: argo-rollouts-dashboard
-          image: vnovoselskiy/kubectl-argo-rollouts:latest
+          image: quay.io/argoproj/kubectl-argo-rollouts:v1.2.0 
+          # vnovoselskiy/kubectl-argo-rollouts:latest
           env:
             - name: TZ
               value: Europe/Madrid
