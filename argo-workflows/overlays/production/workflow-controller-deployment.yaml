@@ -13,3 +13,11 @@ spec:
           env:
             - name: TZ
               value: Europe/Madrid
+          command:
+            - workflow-controller
+          args:
+            - --configmap
+            - workflow-controller-configmap
+            - --executor-image
+            - quay.io/argoproj/argoexec:v3.3.1
+
