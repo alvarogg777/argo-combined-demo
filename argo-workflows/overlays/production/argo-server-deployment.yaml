@@ -14,7 +14,7 @@ spec:
           # - --executor-image
           # - argoproj/argoexec:latest-linux-arm64
           name: argo-server
-          image: quay.io/argoproj/argocli:v3.3.1
+          image: quay.io/argoproj/argocli:v3.3.2
           readinessProbe:
             httpGet:
               path: /
