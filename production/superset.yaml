@@ -10,7 +10,7 @@ spec:
   source:
     path: ./helm/superset
     repoURL: https://gitlab.com/alborotogarcia/helm-superset
-    targetRevision: patch-1.4.2
+    targetRevision: patch-1.4.1
   destination:
     namespace: super
     server: https://kubernetes.default.svc
