@@ -10,7 +10,7 @@ spec:
   source:
     path: charts/manifests
     repoURL: https://github.com/alvarogg777/longhorn-charts.git
-    targetRevision: patch-1.2.4
+    targetRevision: patch-1.3.0
   destination:
     namespace: storage
     server: https://kubernetes.default.svc
