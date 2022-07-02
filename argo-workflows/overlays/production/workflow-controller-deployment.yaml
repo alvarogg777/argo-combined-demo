@@ -9,7 +9,7 @@ spec:
         - name: regcred
       containers:
         - name: workflow-controller
-          image: quay.io/argoproj/workflow-controller:v3.3.6
+          image: quay.io/argoproj/workflow-controller:v3.3.8
           env:
             - name: TZ
               value: Europe/Madrid
@@ -19,5 +19,5 @@ spec:
             - --configmap
             - workflow-controller-configmap
             - --executor-image
-            - quay.io/argoproj/argoexec:v3.3.6
+            - quay.io/argoproj/argoexec:v3.3.8
 
