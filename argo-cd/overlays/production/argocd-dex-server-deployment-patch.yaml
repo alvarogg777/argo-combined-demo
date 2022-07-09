@@ -9,7 +9,7 @@ spec:
       - name: regcred
       initContainers:
       - name: copyutil
-        image: quay.io/argoproj/argocd:v2.4.3
+        image: quay.io/argoproj/argocd:v2.4.4
         env:
           - name: TZ
             value: Europe/Madrid
