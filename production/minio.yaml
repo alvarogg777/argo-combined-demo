@@ -16,7 +16,7 @@ spec:
       valueFiles:
         - https://${GH_TOKEN}@raw.githubusercontent.com/alvarogg777/minio/main/minio-values.yaml
     repoURL: https://charts.min.io/
-    targetRevision: minio-4.0.15
+    targetRevision: 4.0.15
   syncPolicy:
     automated:
       selfHeal: true
