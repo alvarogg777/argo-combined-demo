@@ -19,7 +19,7 @@ spec:
         - name: extraArgs
           value: "{--dns01-recursive-nameservers=1.1.1.1:53}"
     repoURL: https://charts.jetstack.io
-    targetRevision: v1.9.1
+    targetRevision: v1.10.0
   syncPolicy:
     automated:
       selfHeal: true
