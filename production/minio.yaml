@@ -6,23 +6,18 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
+  project: production
+  source:
+    path: ./
+    repoURL: https://github.com/alvarogg777/minio.git
+    targetRevision: main
   destination:
     namespace: storage
     server: https://kubernetes.default.svc
-  project: production
-  source:
-    repoURL: https://github.com/alvarogg777/minio.git
-    targetRevision: HEAD
-    path: ""
-    helm:
-      repoURL: https://charts.min.io/
-      chart: "minio"
-      chartVersion: "4.0.15"
-      valueFiles: ['minio-values.yaml']
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
     syncOptions:
-      - CreateNamespace=true
-
+    - CreateNamespace=true
+    - Validate=false
