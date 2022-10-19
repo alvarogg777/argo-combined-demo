@@ -11,12 +11,14 @@ spec:
     server: https://kubernetes.default.svc
   project: production
   source:
-    chart: minio
+    repoURL: https://github.com/alvarogg777/minio.git
+    targetRevision: HEAD
+    path: ""
     helm:
-      valueFiles:
-        - https://${GH_TOKEN}@raw.githubusercontent.com/alvarogg777/minio/main/minio-values.yaml
-    repoURL: https://charts.min.io/
-    targetRevision: 4.0.15
+      repoURL: https://charts.min.io/
+      chart: "minio"
+      chartVersion: "4.0.15"
+      valueFiles: ['minio-values.yaml']
   syncPolicy:
     automated:
       selfHeal: true
