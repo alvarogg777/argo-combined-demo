@@ -9,10 +9,10 @@ spec:
       - name: regcred
       initContainers:
       - name: copyutil
-        image: quay.io/argoproj/argocd:v2.4.9
+        image: quay.io/argoproj/argocd:v2.4.15
         env:
           - name: TZ
             value: Europe/Madrid
       containers:
       - name: dex
-        image: dexidp/dex:v2.31.1
+        image: dexidp/dex:v2.35.3

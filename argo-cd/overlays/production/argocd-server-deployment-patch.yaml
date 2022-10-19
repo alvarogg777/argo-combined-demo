@@ -9,7 +9,7 @@ spec:
       - name: regcred
       containers:
       - name: argocd-server
-        image: quay.io/argoproj/argocd:v2.4.9
+        image: quay.io/argoproj/argocd:v2.4.15
         command: [argocd-server, --staticassets, /shared/app, --insecure]
         env:
           - name: TZ
