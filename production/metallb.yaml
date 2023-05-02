@@ -14,10 +14,10 @@ spec:
   destination:
     namespace: metallb-system
     server: https://kubernetes.default.svc
-  # syncPolicy:
-  #   automated:
-  #     selfHeal: true
-  #     prune: true
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
     retryStrategy:
       limit: 3
       retryPolicy: "Always"
