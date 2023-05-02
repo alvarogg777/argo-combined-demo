@@ -6,6 +6,6 @@ resources:
 - regcred.yaml
 - ingress.yaml
 patchesStrategicMerge:
-- argo-server-deployment.yaml
-- workflow-controller-deployment.yaml
 - argo-server-role.yaml
+# - argo-server-deployment.yaml
+# - workflow-controller-deployment.yaml
