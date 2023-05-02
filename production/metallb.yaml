@@ -18,15 +18,12 @@
 #     automated:
 #       selfHeal: true
 #       prune: true
-#   retryStrategy:
-#     limit: 3
-#     retryPolicy: "Always"
-#     backoff:
-#       duration: "1"      # Must be a string. Default unit is seconds. Could also be a Duration, e.g.: "2m", "6h", "1d"
-#       factor: 2
-#       maxDuration: "1m"  # Must be a string. Default unit is seconds. Could also be a Duration, e.g.: "2m", "6h", "1d"
-#     affinity:
-#       nodeAntiAffinity: {}
 #     syncOptions:
 #     - CreateNamespace=true
 #     - Validate=false
+#     retry:
+#       limit: 5 # number of failed sync attempt retries; unlimited number of attempts if less than 0
+#       backoff:
+#         duration: 5s # the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")
+#         factor: 2 # a factor to multiply the base duration after each failed retry
+#         maxDuration: 3m # the maximum amount of time allowed for the backoff strategy
